@@ -1,5 +1,6 @@
 project:
   type: manuscript
+  output-dir: "_build" # '_manuscript' by default
 
 manuscript:
   article: index.qmd
