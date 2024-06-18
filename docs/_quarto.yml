@@ -1,19 +1,44 @@
+# https://quarto.org/docs/manuscripts/components.html
+# https://quarto.org/docs/reference/projects/manuscripts.html
+
 project:
   type: manuscript
   output-dir: "_build" # '_manuscript' by default
 
 manuscript:
   article: index.qmd
+  #meca-bundle: true
+  #meca-bundle: "bundle.zip"
+  manuscript-url: https://s2t2.github.io/quarto-manuscript-template
+  #code-links:
+  # - https://github.com/s2t2/quarto-manuscript-template
+  #notebooks:
+  #resources:
+  #- data/earthquakes.csv
+
+bibliography: references.bib
 
 format:
-  html:
-    comments:
-      hypothesis: true
+  html: default
+    #theme: solar
   #docx: default
   #jats: default
+  pdf: default
 
-  # (other formats)
-  #pdf: default
+  #
+  # JOURNAL FORMATS:
+  # https://quarto.org/docs/extensions/listing-journals.html
+  #
+
+  # https://github.com/quarto-journals/plos#readme
+  # quarto install extension quarto-journals/plos docs/
+  #plos-pdf:
+  #  keep-tex: true
+
+  # https://github.com/mikemahoney218/quarto-arxiv
+  # quarto install extension mikemahoney218/quarto-arxiv
+  #arxiv-pdf:
+  #  keep-tex: true
 
 #execute:
 #  freeze: true

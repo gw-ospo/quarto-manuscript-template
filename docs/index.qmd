@@ -1,16 +1,144 @@
 ---
-title: Quarto-manuscript-template
+title: Quarto Manuscript Template
+
 authors:
-  - name: Norah Jones
-    affiliation: The University
-    #roles: writing
-    #corresponding: true
+
+  - name: Author 1
+    orcid: 0000-0000-0000-0000
+    corresponding: true
+    email: you@example.com
+    roles:
+      - Investigation
+      - Project administration
+      - Software
+      - Visualization
+    affiliations:
+      - Org 1
+
+  - name: Author 2
+    orcid: 2222-2222-2222-2222
+    corresponding: false
+    roles: []
+    affiliations:
+      - Org 1
+
+keywords:
+  - Keyword 1
+  - Keyword 2
+
+abstract: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+plain-language-summary: |
+  This is a plain english summary.
+
+key-points:
+  - This is the first point.
+  - This is the second point.
+
+date: last-modified
+
 bibliography: references.bib
+
+citation:
+  container-title: Earth and Space Science
+
+number-sections: true
 ---
 
-## Section
-This is a simple placeholder for the manuscript's main document [@knuth84].
+## Introduction {#sec-intro}
 
-### Sub-section
+This template was based on the [quarto manuscript template](https://github.com/quarto-ext/manuscript-template-jupyter).
 
-This is a sub-section.
+
+This is a reference [@knuth84].
+
+
+## Results {#sec-results}
+
+The results section.
+
+### Result 1
+
+This is a subsection.
+
+This is a generated plot.
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'}
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+
+See also: https://quarto.org/docs/computations/python.html
+
+
+
+
+
+### Result 2
+
+This is a subsection.
+
+This is an image.
+
+![Map of La Palma](images/la-palma-map.png){#fig-map}
+
+La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (@fig-map).
+
+
+## Methods {#sec-methods}
+
+The methods section.
+
+### Method 1
+
+This is a subsection.
+
+
+This is a table.
+
+| Name                 | Year   |
+| -------------------- | ------ |
+| Current              | 2021   |
+| Teneguía             | 1971   |
+| Nambroque            | 1949   |
+| El Charco            | 1712   |
+| Volcán San Antonio   | 1677   |
+| Volcán San Martin    | 1646   |
+| Tajuya near El Paso  | 1585   |
+| Montaña Quemada      | 1492   |
+
+: Recent historic eruptions on La Palma {#tbl-history}
+
+@tbl-history summarises the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.
+
+
+### Method 2
+
+This is a subsection.
+
+
+## Discussion {#sec-discussion}
+
+The discussion section.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

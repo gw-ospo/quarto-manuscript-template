@@ -2,5 +2,7 @@
 
 .DS_Store
 
-docs/_build/
 docs/_manuscript/
+docs/_build/
+
+docs/site_libs
