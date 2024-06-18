@@ -1,28 +1,42 @@
 # https://quarto.org/docs/manuscripts/components.html
 # https://quarto.org/docs/reference/projects/manuscripts.html
+# https://quarto.org/docs/reference/projects/options.html
 
 project:
   type: manuscript
   output-dir: "_build" # '_manuscript' by default
+  preview:
+    port: 4999
+    browser: true
+
+  resources:
+  - data/earthquakes.csv
 
 manuscript:
   article: index.qmd
+
   #meca-bundle: true
   #meca-bundle: "bundle.zip"
   manuscript-url: https://s2t2.github.io/quarto-manuscript-template
-  #code-links:
-  # - https://github.com/s2t2/quarto-manuscript-template
-  #notebooks:
-  #resources:
-  #- data/earthquakes.csv
 
-bibliography: references.bib
+  code-links:
+  - text: Article Repository
+    icon: file-code
+    href: https://github.com/s2t2/quarto-manuscript-template #data-import.py
+  - text: Data File
+    icon: file-earmark-spreadsheet
+    href: data/earthquakes.csv
+
+  #notebooks:
+
+
+#bibliography: references.bib
 
 format:
   html: default
     #theme: solar
   #docx: default
-  #jats: default
+  jats: default
   pdf: default
 
   #

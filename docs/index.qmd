@@ -40,8 +40,17 @@ date: last-modified
 
 bibliography: references.bib
 
+# this controls the citation at the bottom
+# https://quarto.org/docs/reference/metadata/citation.html
 citation:
-  container-title: Earth and Space Science
+  type: article-journal
+  id: lastname2024
+  #container-title: ACM Transactions on Embedded Computing Systems # jouurnal title
+  #volume: 21
+  #issue: 2
+  #issued: 2022-03
+  #issn: 1539-9087
+  #doi: 10.1145/3514174
 
 number-sections: true
 ---
@@ -53,6 +62,7 @@ This template was based on the [quarto manuscript template](https://github.com/q
 
 This is a reference [@knuth84].
 
+Another reference [@rossetti2023bots].
 
 ## Results {#sec-results}
 
