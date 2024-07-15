@@ -62,7 +62,7 @@ Update the manuscript content and metadata in the "docs/index.qmd" file.
 
 > NOTE: the manuscript content is currently provided in a single file, but it is possible to split this content up into multiple included files, if you like that kind of thing.
 
-### Previewing the Manuscript
+### Previewing
 
 
 Previewing the site (runs on a local web server, as designated by the `project.preview.port` setting in the "docs/_quarto.yml" config file):
@@ -72,12 +72,22 @@ quarto preview docs/
 ```
 
 
-### Building the Manuscript
+### Building
 
 Rendering the documentation (to "docs/_build", as designated by the `project.output-dir` setting in the "docs/_quarto.yml" config file):
 
 ```sh
 quarto render docs/
+```
+
+You can inspect the resulting HTML file at "docs/_build/index.html" and PDF file at "docs/_build/index.pdf".
+
+```sh
+# open the website:
+open docs/_build/index.html
+
+# open the pdf:
+open docs/_build/index.pdf
 ```
 
 
@@ -86,8 +96,7 @@ quarto render docs/
 There are [Quarto Journal Article Extensions](https://quarto.org/docs/extensions/listing-journals.html) that can be used to export the manuscript in a format suitable for submission to specified journals.
 
 
-
-## Website Publishing
+## Publishing to GitHub Pages
 
 We are using the ["quarto-pages.yml" workflow configuration file](/.github/workflows/quarto-pages.yml) to deploy the site to GitHub Pages when new commits are pushed to the main branch.
 
