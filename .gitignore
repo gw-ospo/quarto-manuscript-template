@@ -5,6 +5,8 @@
 docs/.jupyter_cache/
 
 docs/site_libs/
+docs/index_files/
+docs/*_files/
 
 docs/_manuscript/
 docs/_build/
