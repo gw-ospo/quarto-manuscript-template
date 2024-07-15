@@ -62,7 +62,7 @@ Update the manuscript content and metadata in the "docs/index.qmd" file.
 
 > NOTE: the manuscript content is currently provided in a single file, but it is possible to split this content up into multiple included files, if you like that kind of thing.
 
-### Previewing the Manuscript
+### Previewing
 
 
 Previewing the site (runs on a local web server, as designated by the `project.preview.port` setting in the "docs/_quarto.yml" config file):
@@ -72,7 +72,7 @@ quarto preview docs/
 ```
 
 
-### Building the Manuscript
+### Building
 
 Rendering the documentation (to "docs/_build", as designated by the `project.output-dir` setting in the "docs/_quarto.yml" config file):
 
@@ -80,14 +80,35 @@ Rendering the documentation (to "docs/_build", as designated by the `project.out
 quarto render docs/
 ```
 
-
-### Formatting for a Journal
+## Formatting for a Journal
 
 There are [Quarto Journal Article Extensions](https://quarto.org/docs/extensions/listing-journals.html) that can be used to export the manuscript in a format suitable for submission to specified journals.
 
+For example, publishing to [Arxiv](https://arxiv.org/):
 
+```sh
+# see: https://github.com/mikemahoney218/quarto-arxiv
+cd docs
+quarto install extension mikemahoney218/quarto-arxiv
 
-## Website Publishing
+# for fonts (on max):
+brew tap homebrew/cask-fonts
+brew install font-latin-modern
+brew install font-latin-modern-math
+
+# for fonts (on linux):
+# apt install lmodern
+```
+
+Export article to PDF (with Arxiv formatting):
+
+```sh
+quarto render docs/index.qmd --to arxiv-pdf
+
+open docs/_build/index.pdf
+```
+
+## Publishing to GitHub Pages
 
 We are using the ["quarto-pages.yml" workflow configuration file](/.github/workflows/quarto-pages.yml) to deploy the site to GitHub Pages when new commits are pushed to the main branch.
 
