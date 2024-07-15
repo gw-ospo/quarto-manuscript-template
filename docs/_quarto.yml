@@ -9,33 +9,30 @@ project:
     port: 4999
     browser: true
 
+  # non-quarto files that should be included with the build:
   resources:
   - data/earthquakes.csv
 
 manuscript:
   article: index.qmd
 
-  #meca-bundle: true
-  #meca-bundle: "bundle.zip"
-  manuscript-url: https://s2t2.github.io/quarto-manuscript-template
+  manuscript-url: https://gw-ospo.github.io/quarto-manuscript-template
 
   code-links:
-  - text: Article Repository
+  # example url or local file containing code that produced the research:
+  - text: Code Repository
     icon: file-code
-    href: https://github.com/s2t2/quarto-manuscript-template #data-import.py
-  - text: Data File
+    href: https://github.com/gw-ospo/quarto-manuscript-template
+  # an example data file used with the research or produced by the research:
+  - text: Results File
     icon: file-earmark-spreadsheet
     href: data/earthquakes.csv
 
-  #notebooks:
-
-
-#bibliography: references.bib
 
 format:
   html: default
     #theme: solar
-  #docx: default
+  docx: default
   jats: default
   pdf: default
 
@@ -44,16 +41,12 @@ format:
   # https://quarto.org/docs/extensions/listing-journals.html
   #
 
-  # https://github.com/quarto-journals/plos#readme
-  # quarto install extension quarto-journals/plos docs/
-  #plos-pdf:
-  #  keep-tex: true
-
   # https://github.com/mikemahoney218/quarto-arxiv
   # quarto install extension mikemahoney218/quarto-arxiv
   #arxiv-pdf:
   #  keep-tex: true
 
-#execute:
-#  freeze: true
-#
+  # https://github.com/quarto-journals/plos#readme
+  # quarto install extension quarto-journals/plos docs/
+  #plos-pdf:
+  #  keep-tex: true

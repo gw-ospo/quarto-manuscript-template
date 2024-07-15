@@ -2,7 +2,9 @@
 
 .DS_Store
 
+docs/.jupyter_cache/
+
+docs/site_libs/
+
 docs/_manuscript/
 docs/_build/
-
-docs/site_libs

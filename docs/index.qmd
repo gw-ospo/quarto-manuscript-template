@@ -40,12 +40,13 @@ date: last-modified
 
 bibliography: references.bib
 
+# CITATION OF THIS ARTICLE
 # this controls the citation at the bottom
 # https://quarto.org/docs/reference/metadata/citation.html
 citation:
   type: article-journal
   id: lastname2024
-  #container-title: ACM Transactions on Embedded Computing Systems # jouurnal title
+  #container-title: ACM Transactions on Embedded Computing Systems # journal title
   #volume: 21
   #issue: 2
   #issued: 2022-03
@@ -53,11 +54,13 @@ citation:
   #doi: 10.1145/3514174
 
 number-sections: true
+# https://quarto.org/docs/authoring/tables.html#caption-location
+tbl-cap-location: bottom
 ---
 
 ## Introduction {#sec-intro}
 
-This template was based on the [quarto manuscript template](https://github.com/quarto-ext/manuscript-template-jupyter).
+This template was based on the [Quarto Manuscript Template](https://github.com/quarto-ext/manuscript-template-jupyter).
 
 
 This is a reference [@knuth84].
@@ -95,7 +98,7 @@ plt.show()
 ```
 
 
-See also: https://quarto.org/docs/computations/python.html
+Results can be generated from [Python](https://quarto.org/docs/computations/python.html) or [R](https://quarto.org/docs/computations/r.html).
 
 
 
@@ -121,7 +124,8 @@ The methods section.
 This is a subsection.
 
 
-This is a table.
+This is a table. @tbl-history summarizes the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.
+
 
 | Name                 | Year   |
 | -------------------- | ------ |
@@ -136,7 +140,8 @@ This is a table.
 
 : Recent historic eruptions on La Palma {#tbl-history}
 
-@tbl-history summarises the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.
+
+
 
 
 ### Method 2

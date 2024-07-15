@@ -61,7 +61,7 @@ jobs:
         # uncomment below and fill to pin a version
         # version: SPECIFIC-QUARTO-VERSION-HERE
 
-    # SAVE AS HTML (SEE docs/_build OR docs/_book)
+    # SAVE AS HTML (see docs/_build)
     - name: Build the book
       run: |
         quarto render docs/
